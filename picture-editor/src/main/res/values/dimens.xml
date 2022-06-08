@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pe_color">28dp</dimen>
+    <dimen name="pe_color_margin">6dp</dimen>
+    <dimen name="pe_mode_space">40dp</dimen>
+</resources>

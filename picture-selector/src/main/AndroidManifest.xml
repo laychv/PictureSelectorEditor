@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lib.picture_selector">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <provider
+            android:name=".basic.PictureFileProvider"
+            android:authorities="${applicationId}.luckProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ps_file_paths" />
+        </provider>
+
+        <service
+            android:name=".service.ForegroundService"
+            android:enabled="true"
+            android:foregroundServiceType="location" />
+
+        <activity
+            android:name=".basic.PictureSelectorSupporterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Base.Theme.NoActionBar" />
+
+        <activity
+            android:name=".basic.PictureSelectorTransparentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Picture.Theme.Translucent" />
+
+    </application>
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pc_doodle">涂鸦</string>
+    <string name="pc_text">文字</string>
+    <string name="pc_mosaic">马赛克</string>
+    <string name="pc_clip">裁剪</string>
+    <string name="pc_reset">还原</string>
+    <string name="pc_done">完成</string>
+    <string name="pc_cancel">取消</string>
+    <string name="pc_rotate">旋转</string>
+    <string name="pc_back">返回</string>
+    <string name="pc_confirm">确定</string>
+
+    <string name="pc_mosaic_tip">请直接在图片上涂抹虚化</string>
+    <string name="pc_undo">撤销</string>
+    <string name="pc_all_photo">所有照片</string>
+    <string name="pc_original">原图</string>
+    <string name="pc_preview">预览</string>
+
+    <string name="pc_enable_storage_permission">开启存储权限</string>
+    <string name="pc_enable_storage_tips">相册功能需要使用到存储权限，请在设置中开启此应用的存储权限</string>
+
+</resources>

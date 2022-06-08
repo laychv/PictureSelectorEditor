@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:clickable="true"
+        android:contentDescription="@string/pc_back"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:src="@drawable/pe_btn_back" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/layout_op_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <ViewSwitcher
+            android:id="@+id/vs_op_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:measureAllChildren="true">
+
+            <com.lib.picture_editor.IMGColorGroup
+                android:id="@+id/cg_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checkedButton="@+id/cr_red"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:id="@+id/cr_red"
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+                    android:button="@null"
+                    app:pe_color="@color/pe_color_red" />
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+                    app:pe_color="@color/pe_color_black" />
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+
+                    app:pe_color="@color/pe_color_white" />
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+                    app:pe_color="@color/pe_color_cyan" />
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+                    app:pe_color="@color/pe_color_yellow" />
+
+                <com.lib.picture_editor.IMGColorRadio
+                    android:layout_width="@dimen/pe_color"
+                    android:layout_height="@dimen/pe_color"
+                    android:layout_margin="@dimen/pe_color_margin"
+                    app:pe_color="@color/pe_color_blue" />
+
+            </com.lib.picture_editor.IMGColorGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pc_mosaic_tip"
+                android:textColor="@color/pe_color_white"
+                android:textSize="12sp" />
+
+        </ViewSwitcher>
+
+        <ImageButton
+            android:id="@+id/btn_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:contentDescription="@string/pc_undo"
+            android:onClick="onClick"
+            android:src="@drawable/pe_btn_undo" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_modes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <RadioButton
+            android:id="@+id/rb_doodle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:button="@drawable/pe_selector_draw"
+            android:gravity="top"
+            android:onClick="onClick"
+            android:textColor="#FFF" />
+
+        <Space
+            android:layout_width="@dimen/pe_mode_space"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/pc_text"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/pe_btn_word"
+            android:textColor="#FFF" />
+
+        <Space
+            android:layout_width="@dimen/pe_mode_space"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_mosaic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/pe_selector_mark"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:textColor="#FFF" />
+
+        <Space
+            android:layout_width="@dimen/pe_mode_space"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_clip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/pc_clip"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/pe_btn_cut"
+            android:textColor="#FFF" />
+
+        <Space
+            android:layout_width="55dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pe_shape_btn"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="@string/pc_done"
+            android:textColor="#FFF"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+</LinearLayout>

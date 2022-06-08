@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lib.picture_editor.IMGColorGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cg_colors"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:checkedButton="@+id/cr_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:id="@+id/cr_white"
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_white" />
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_black" />
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_red" />
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_cyan" />
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_yellow" />
+
+    <com.lib.picture_editor.IMGColorRadio
+        android:layout_width="@dimen/pe_color"
+        android:layout_height="@dimen/pe_color"
+        android:layout_margin="@dimen/pe_color_margin"
+        app:pe_color="@color/pe_color_blue" />
+
+</com.lib.picture_editor.IMGColorGroup>
